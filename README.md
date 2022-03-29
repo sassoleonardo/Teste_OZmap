@@ -36,7 +36,7 @@ data_D = response_D.get('rows') #jsons
 ```python
 writer = pd.ExcelWriter('final.xlsx')
 ```
-### Função para encontrar quantos usuários por módulo, e escrever o resultado no arquivo xlsx em 4 planilhas diferentes. Os parâmetros são os dados requisitados via API (data) e o nome da empresa (company).
+### Função para encontrar quantos usuários por módulo, e escrever o resultado no arquivo xlsx em planilhas diferentes. Os parâmetros são os dados requisitados via API (data) e o nome da empresa (company).
 
 ```python
 def find_modules(data, company):
