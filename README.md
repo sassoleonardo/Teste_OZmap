@@ -60,7 +60,7 @@ def find_modules(data, company):
     print(df)
 
 ```
-### Aplcando a função em cada empresa:
+### Aplicando a função em cada empresa:
 ```python
 find_modules(data=data_A, company='company_A')
 find_modules(data=data_B, company='company_B')
@@ -71,3 +71,4 @@ find_modules(data=data_D, company='company_D')
 ```python
 writer.save() 
 ```
+##### esse codigo so existe gracas a bru
