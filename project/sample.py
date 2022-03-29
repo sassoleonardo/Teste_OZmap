@@ -39,30 +39,18 @@ def find_modules(data, company):
     count_Loki = 0
     for modules in range(0, len(data)):
         module = data[modules]['resources']
-        #print(module)
         if any("API" in s for s in module):
             count_API+=1
-            #print(module, count_API, "API")
         if any("Loki" in s for s in module):
             count_Loki+=1
-            #print(module, count_Loki, "LOKI")
         if any("OZmob" in s for s in module):
             count_OZmob+=1
-            #print(module, count_OZmob, "OZMOB")
         if any("OZmap" in s for s in module):
             count_OZmap+=1
-            #print(module, count_OZmap, "OZMOB")
     ###SAVING THE OBTAINED DATA IN TO EXCEL FILE
     df = pd.DataFrame([[count_API], [count_Loki], [count_OZmap], [count_OZmob]], index = ['API', 'LOKI', 'OZMAP', 'OZMOB'], columns = ['users'])
     df.to_excel(writer, f'{company}')
     print(df)
-       
-    #print("API = ",(count_API))
-    #print("Loki = ", count_Loki)
-    #print("OZmob = ", count_OZmob)
-    #print("OZmap = ", count_OZmap)
-
-
 
 find_modules(data=data_A, company='company_A')
 find_modules(data=data_B, company='company_B')
