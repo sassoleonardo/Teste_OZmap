@@ -3,33 +3,33 @@
 
 ### Lendo os dados via API (são 4 API's diferentes, cada uma referente a uma empresa fictícia):
 ```python
-#company_A
-Headers_A = {"Authorization": "access key"}
-url_A = ("url/company/A")
-response_A = requests.get(url_A, headers=Headers_A).json()
-data_A = response_A.get('rows') #jsons 
+#company_a
+Headers_a = {"Authorization": "access key"}
+url_a = ("url/company/A")
+response_a = requests.get(url_a, headers=Headers_a).json()
+data_a = response_A.get('rows') #jsons 
 ```
 ```python
-#company_B
-Headers_B = {"Authorization": "access key"}
-url_B = ("url/company/B")
-response_B = requests.get(url_B, headers=Headers_B).json()
-data_B = response_B.get('rows') #jsons
+#company_b
+Headers_b = {"Authorization": "access key"}
+url_b = ("url/company/B")
+response_b = requests.get(url_b, headers=Headers_b).json()
+data_b = response_b.get('rows') #jsons
 ```
 ```python
-#company_C
-Headers_C = {"Authorization": "access key"}
-url_C = ("url/company/C")
-response_C = requests.get(url_C, headers=Headers_C).json()
-data_C = response_C.get('rows') #jsons
+#company_c
+Headers_c = {"Authorization": "access key"}
+url_c = ("url/company/C")
+response_c = requests.get(url_C, headers=Headers_C).json()
+data_c = response_c.get('rows') #jsons
 
 ```
 ```python
-#company_D
-Headers_D = {"Authorization": "access key"}
-url_D = ("url/company/D")
-response_D = requests.get(url_D, headers=Headers_D).json()
-data_D = response_D.get('rows') #jsons
+#company_d
+Headers_d = {"Authorization": "access key"}
+url_d = ("url/company/D")
+response_d = requests.get(url_d, headers=Headers_d).json()
+data_d = response_d.get('rows') #jsons
 ```
 
 ### Criando uma classe para escrever os dados posteriormente.
@@ -40,35 +40,34 @@ writer = pd.ExcelWriter('final.xlsx')
 
 ```python
 def find_modules(data, company):
-    count_API = 0
-    count_OZmob = 0
-    count_OZmap = 0
-    count_Loki = 0
+    count_api = 0
+    count_ozmob = 0
+    count_ozmap = 0
+    count_loki = 0
     for modules in range(0, len(data)):
         module = data[modules]['resources']
         if any("API" in s for s in module):
-            count_API+=1
+            count_api+=1
         if any("Loki" in s for s in module):
-            count_Loki+=1
+            count_loki+=1
         if any("OZmob" in s for s in module):
-            count_OZmob+=1
+            count_ozmob+=1
         if any("OZmap" in s for s in module):
-            count_OZmap+=1
+            count_ozmap+=1
     #SAVING THE OBTAINED DATA IN TO EXCEL FILE
-    df = pd.DataFrame([[count_API], [count_Loki], [count_OZmap], [count_OZmob]], index = ['API', 'LOKI', 'OZMAP', 'OZMOB'], columns = ['users'])
+    df = pd.DataFrame([[count_api], [count_loki], [count_ozmap], [count_ozmob]], index = ['API', 'LOKI', 'OZMAP', 'OZMOB'], columns = ['users'])
     df.to_excel(writer, f'{company}')
     print(df)
 
 ```
 ### Aplicando a função em cada empresa:
 ```python
-find_modules(data=data_A, company='company_A')
-find_modules(data=data_B, company='company_B')
-find_modules(data=data_C, company='company_C')
-find_modules(data=data_D, company='company_D')
+find_modules(data=data_a, company='company_a')
+find_modules(data=data_b, company='company_b')
+find_modules(data=data_c, company='company_c')
+find_modules(data=data_d, company='company_d')
 ```
 ### Salvando os dados no arquivo xlsx:
 ```python
 writer.save() 
 ```
-##### esse codigo so existe gracas a bru
