@@ -1,6 +1,12 @@
 # Teste técnico para vaga de estágio em análise e manipulação de dados.
 #### O teste consiste em gerar, através de um script em python, uma planilha que contém a quantidade de usuários por módulo para 4 empresas. Para isso serão realizadas consultas para a rota "rota" que contém uma lista com os dados de todos os usuários. Os módulos são OZmap, Loki, OZmob e API.
 
+
+### Libs:
+```python
+import pandas as pd
+import requests
+```
 ### Lendo os dados via API:
 ```python
 #company_a
@@ -32,11 +38,11 @@ response_d = requests.get(url_d, headers=Headers_d).json()
 data_d = response_d.get('rows') #jsons
 ```
 
-### Criando uma classe para escrever os dados posteriormente.
+### Criando uma classe para escrever os dados posteriormente:
 ```python
 writer = pd.ExcelWriter('final.xlsx')
 ```
-### Função para encontrar quantos usuários por módulo, e escrever o resultado no arquivo xlsx em planilhas diferentes. Os parâmetros são os dados requisitados via API (data) e o nome da empresa (company).
+### Função para encontrar quantos usuários por módulo, e escrever o resultado no arquivo xlsx em planilhas diferentes. Os parâmetros são os dados requisitados via API (data) e o nome da empresa (company):
 
 ```python
 def find_modules(data, company):
