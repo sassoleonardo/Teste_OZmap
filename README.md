@@ -1,7 +1,7 @@
 # Teste técnico para vaga de estágio em análise e manipulação de dados.
 #### O teste consiste em gerar, através de um script em python, uma planilha que contém a quantidade de usuários por módulo para 4 empresas. Para isso serão realizadas consultas para a rota "rota" que contém uma lista com os dados de todos os usuários. Os módulos são OZmap, Loki, OZmob e API.
 
-### Lendo os dados via API (são 4 API's diferentes, cada uma referente a uma empresa fictícia):
+### Lendo os dados via API:
 ```python
 #company_a
 Headers_a = {"Authorization": "access key"}
