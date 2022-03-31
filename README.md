@@ -12,31 +12,31 @@ import requests
 ### Lendo os dados via API:
 ```python
 #company_a
-Headers_a = {"Authorization": "access key"}
+headers_a = {"Authorization": "access key"}
 url_a = ("url/company/A")
-response_a = requests.get(url_a, headers=Headers_a).json()
-data_a = response_A.get('rows') #jsons 
+response_a = requests.get(url_a, headers=headers_a).json()
+data_a = response_a.get('rows') #jsons 
 ```
 ```python
 #company_b
-Headers_b = {"Authorization": "access key"}
+headers_b = {"Authorization": "access key"}
 url_b = ("url/company/B")
-response_b = requests.get(url_b, headers=Headers_b).json()
+response_b = requests.get(url_b, headers=headers_b).json()
 data_b = response_b.get('rows') #jsons
 ```
 ```python
 #company_c
-Headers_c = {"Authorization": "access key"}
+headers_c = {"Authorization": "access key"}
 url_c = ("url/company/C")
-response_c = requests.get(url_C, headers=Headers_C).json()
+response_c = requests.get(url_c, headers=headers_c).json()
 data_c = response_c.get('rows') #jsons
 
 ```
 ```python
 #company_d
-Headers_d = {"Authorization": "access key"}
+headers_d = {"Authorization": "access key"}
 url_d = ("url/company/D")
-response_d = requests.get(url_d, headers=Headers_d).json()
+response_d = requests.get(url_d, headers=headers_d).json()
 data_d = response_d.get('rows') #jsons
 ```
 
