@@ -54,7 +54,7 @@ def find_modules(data, company):
             count_ozmob+=1
         if any("OZmap" in s for s in module):
             count_ozmap+=1
-    #SAVING THE OBTAINED DATA IN TO EXCEL FILE
+    #SAVE DATA
     df = pd.DataFrame([[count_api], [count_loki], [count_ozmap], [count_ozmob]], index = ['API', 'LOKI', 'OZMAP', 'OZMOB'], columns = ['users'])
     df.to_excel(writer, f'{company}')
     print(df)
