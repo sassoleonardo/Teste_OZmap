@@ -3,27 +3,27 @@ import requests
 
 ##GET DATA
 #company_a
-Headers_a = {"Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2R1bGUiOiJhcGkiLCJ1c2VyIjoiNWQ5ZjNmYjgyMDAxNDEwMDA2NDdmNzY4IiwiY3JlYXRpb25EYXRlIjoiMjAyMi0wMy0yNFQyMDo0NTowOC40MDZaIiwiaWF0IjoxNjQ4MTU0NzA4fQ.3Vg39IhsFa2fSywiqc3xGNrIu-ZTpmGSzxrQ00JJxsc"}
+headers_a = {"Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2R1bGUiOiJhcGkiLCJ1c2VyIjoiNWQ5ZjNmYjgyMDAxNDEwMDA2NDdmNzY4IiwiY3JlYXRpb25EYXRlIjoiMjAyMi0wMy0yNFQyMDo0NTowOC40MDZaIiwiaWF0IjoxNjQ4MTU0NzA4fQ.3Vg39IhsFa2fSywiqc3xGNrIu-ZTpmGSzxrQ00JJxsc"}
 url_a = ("https://import-beltra.ozmap.com.br:9994/api/v2/users")
-response_a = requests.get(url_a, headers=Headers_a).json()
+response_a = requests.get(url_a, headers=headers_a).json()
 data_a = response_a.get('rows') #jsons
 
 #company_b
-Headers_b = {"Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2R1bGUiOiJhcGkiLCJ1c2VyIjoiNWQ5ZjNmYjgyMDAxNDEwMDA2NDdmNzY4IiwiY3JlYXRpb25EYXRlIjoiMjAyMi0wMy0yNFQyMjoyNzowOC44NTdaIiwiaWF0IjoxNjQ4MTYwODI4fQ.Jce1yuBY-k6mK2ywpJlJb3VB5Tn_GCpVH1u7r_Yoxeg"}
+headers_b = {"Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2R1bGUiOiJhcGkiLCJ1c2VyIjoiNWQ5ZjNmYjgyMDAxNDEwMDA2NDdmNzY4IiwiY3JlYXRpb25EYXRlIjoiMjAyMi0wMy0yNFQyMjoyNzowOC44NTdaIiwiaWF0IjoxNjQ4MTYwODI4fQ.Jce1yuBY-k6mK2ywpJlJb3VB5Tn_GCpVH1u7r_Yoxeg"}
 url_b = ("https://import-beltra2.ozmap.com.br:9994/api/v2/users")
-response_b = requests.get(url_b, headers=Headers_b).json()
+response_b = requests.get(url_b, headers=headers_b).json()
 data_b = response_b.get('rows') #jsons
 
 #company_c
-Headers_c = {"Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2R1bGUiOiJhcGkiLCJ1c2VyIjoiNjIyOGRmZmVkMmZlZTYwMDIwZjg0ZmViIiwiY3JlYXRpb25EYXRlIjoiMjAyMi0wMy0yNFQyMjoyNzozNS4zMjBaIiwiaWF0IjoxNjQ4MTYwODU1fQ.F6YuznPvc4sfmEFQCJMf2hMWa4lRxjmPo16UVDqaLC0"}
+headers_c = {"Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2R1bGUiOiJhcGkiLCJ1c2VyIjoiNjIyOGRmZmVkMmZlZTYwMDIwZjg0ZmViIiwiY3JlYXRpb25EYXRlIjoiMjAyMi0wMy0yNFQyMjoyNzozNS4zMjBaIiwiaWF0IjoxNjQ4MTYwODU1fQ.F6YuznPvc4sfmEFQCJMf2hMWa4lRxjmPo16UVDqaLC0"}
 url_c = ("https://import-beltra3.ozmap.com.br:9994/api/v2/users")
-response_c = requests.get(url_c, headers=Headers_c).json()
+response_c = requests.get(url_c, headers=headers_c).json()
 data_c = response_c.get('rows') #jsons
 
 #company_d
-Headers_d = {"Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2R1bGUiOiJhcGkiLCJ1c2VyIjoiNWQ5ZjNmYjgyMDAxNDEwMDA2NDdmNzY4IiwiY3JlYXRpb25EYXRlIjoiMjAyMi0wMy0yNFQyMDo0OTo1Ni41OTZaIiwiaWF0IjoxNjQ4MTU0OTk2fQ.U7T6HtrL8dW-rLJO6Us7TKt7MAE2BQfg4cwCo3ZWTmY"}
+headers_d = {"Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2R1bGUiOiJhcGkiLCJ1c2VyIjoiNWQ5ZjNmYjgyMDAxNDEwMDA2NDdmNzY4IiwiY3JlYXRpb25EYXRlIjoiMjAyMi0wMy0yNFQyMDo0OTo1Ni41OTZaIiwiaWF0IjoxNjQ4MTU0OTk2fQ.U7T6HtrL8dW-rLJO6Us7TKt7MAE2BQfg4cwCo3ZWTmY"}
 url_d = ("https://teste.ozmap.com.br:9994/api/v2/users")
-response_d = requests.get(url_d, headers=Headers_d).json()
+response_d = requests.get(url_d, headers=headers_d).json()
 data_d = response_d.get('rows') #jsons
 
 
