@@ -1,7 +1,7 @@
 import pandas as pd
 import requests
 
-###GET THE DATA VIA API
+##GET DATA
 #company_a
 Headers_a = {"Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2R1bGUiOiJhcGkiLCJ1c2VyIjoiNWQ5ZjNmYjgyMDAxNDEwMDA2NDdmNzY4IiwiY3JlYXRpb25EYXRlIjoiMjAyMi0wMy0yNFQyMDo0NTowOC40MDZaIiwiaWF0IjoxNjQ4MTU0NzA4fQ.3Vg39IhsFa2fSywiqc3xGNrIu-ZTpmGSzxrQ00JJxsc"}
 url_a = ("https://import-beltra.ozmap.com.br:9994/api/v2/users")
@@ -27,11 +27,11 @@ response_d = requests.get(url_d, headers=Headers_d).json()
 data_d = response_d.get('rows') #jsons
 
 
-###XLSX FILE TO WRITE IT LATER
+##WRITE DATA
 writer = pd.ExcelWriter('final.xlsx')
 
 
-###FIND HOW MANY MODULES ARE IN EACH COMPANY
+##FIND MODULES
 def find_modules(data, company):
     count_api = 0
     count_ozmob = 0
@@ -47,7 +47,7 @@ def find_modules(data, company):
             count_ozmob+=1
         if any("OZmap" in s for s in module):
             count_ozmap+=1
-    ###SAVING THE OBTAINED DATA IN TO EXCEL FILE
+    ##SAVE DATA
     df = pd.DataFrame([[count_api], [count_loki], [count_ozmap], [count_ozmob]], index = ['API', 'LOKI', 'OZMAP', 'OZMOB'], columns = ['users'])
     df.to_excel(writer, f'{company}')
     print(df)
